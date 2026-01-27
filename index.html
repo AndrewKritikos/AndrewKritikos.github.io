@@ -199,9 +199,15 @@
         <script src="js/scripts.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
         <script>
+            // 1. Check if the screen width is less than 768px (Mobile/Tablet size)
+            var isMobile = window.innerWidth < 768;
+
+            // 2. Set the number of particles: 30 for mobile, 80 for desktop
+            var particleCount = isMobile ? 20 : 40;
+            
             particlesJS("particles-js", {
             "particles": {
-                "number": { "value": 40, "density": { "enable": true, "value_area": 800 } },
+                "number": { "value": particleCount, "density": { "enable": true, "value_area": 800 } },
                 "color": { "value": "#ffffff" },
                 "shape": { "type": "circle" },
                 "opacity": { "value": 0.2, "random": false },
