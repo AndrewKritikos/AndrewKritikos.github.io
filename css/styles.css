@@ -11201,3 +11201,19 @@ body {
 .footer {
   padding: 5rem 0;
 }
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Darkens the background so text pops */
+    z-index: 0; /* Behind the text */
+}
+
+/* Ensure the text sits ON TOP of the particles */
+.masthead .container {
+    position: relative;
+    z-index: 1; 
+}
